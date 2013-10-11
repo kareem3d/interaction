@@ -228,7 +228,9 @@ class Interaction extends Model {
      */
     public function user()
     {
-        return $this->belongsTo(User::getClass());
+        $user = App::make('Kareem3d\Membership\User');
+
+        return $this->belongsTo($user->getClass());
     }
 
     /**
